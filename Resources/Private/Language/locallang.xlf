@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-04-02T22:16:19Z" product-name="newsletter_man">
+		<header/>
+		<body>
+			<trans-unit id="tx_newsletterman_domain_model_newsletter">
+				<source>Newsletter</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_newsletter.send_date">
+				<source>Send Date</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_newsletter.page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_newsletter.state">
+				<source>State</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_newsletter.recipients">
+				<source>Recipients</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_newsletter.sender">
+				<source>Sender</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipientlist">
+				<source>Recipient List</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipientlist.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipientlist.recipient">
+				<source>Recipient</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient">
+				<source>Recipient</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient.gender">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient.first_name">
+				<source>First Name</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient.last_name">
+				<source>Last Name</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_recipient.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_sender">
+				<source>Sender</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_sender.sender_mail">
+				<source>Sender Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_sender.sender_name">
+				<source>Sender Name</source>
+			</trans-unit>
+			<trans-unit id="gender.none">
+				<source>Not specified</source>
+			</trans-unit>
+			<trans-unit id="gender.mrs">
+				<source>Mrs.</source>
+			</trans-unit>
+			<trans-unit id="gender.mr">
+				<source>Mr.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-04-02T22:16:19Z" product-name="newsletter_man">
+		<header/>
+		<body>
+			<trans-unit id="send_date.description">
+				<source>sendDate</source>
+			</trans-unit>
+			<trans-unit id="page.description">
+				<source>page</source>
+			</trans-unit>
+			<trans-unit id="state.description">
+				<source>state</source>
+			</trans-unit>
+			<trans-unit id="recipients.description">
+				<source>Recipient list</source>
+			</trans-unit>
+			<trans-unit id="sender.description">
+				<source>The sender of this newsletter</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

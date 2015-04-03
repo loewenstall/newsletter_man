@@ -1,0 +1,15 @@
+
+plugin.tx_newsletterman {
+	view {
+		# cat=plugin.tx_newsletterman/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:newsletter_man/Resources/Private/Templates/
+		# cat=plugin.tx_newsletterman/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:newsletter_man/Resources/Private/Partials/
+		# cat=plugin.tx_newsletterman/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:newsletter_man/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_newsletterman//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

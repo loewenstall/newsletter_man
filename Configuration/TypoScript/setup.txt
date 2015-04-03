@@ -1,0 +1,33 @@
+
+plugin.tx_newsletterman {
+	view {
+		templateRootPath = {$plugin.tx_newsletterman.view.templateRootPath}
+		partialRootPath = {$plugin.tx_newsletterman.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_newsletterman.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_newsletterman.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+config.tx_extbase {
+    persistence {
+        classes {
+            LEO\NewsletterMan\Domain\Model\Pages {
+                mapping {
+                    tableName = pages
+                    columns {
+                        uid.mapOnProperty = uid
+                        pid.mapOnProperty = pid
+                    }
+                }
+            }
+        }
+        # make sure ref_index is updated
+        updateReferenceIndex = 1
+    }
+}

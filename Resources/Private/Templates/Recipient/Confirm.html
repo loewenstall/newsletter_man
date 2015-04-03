@@ -1,0 +1,18 @@
+<f:if condition="{recipient}">
+	<f:then>
+		<f:if condition="{settings.confirmation.successPageHeadline}">
+			<h2>{settings.confirmation.successPageHeadline}</h2>
+		</f:if>
+		<p>
+			{settings.confirmation.successPageText}
+		</p>
+	</f:then>
+	<f:else>
+		<f:if condition="{settings.confirmation.failedPageHeadline}">
+			<h2>{settings.confirmation.failedPageHeadline}</h2>
+		</f:if>
+		<p>
+			{settings.confirmation.failedPageText}
+		</p>
+	</f:else>
+</f:if>

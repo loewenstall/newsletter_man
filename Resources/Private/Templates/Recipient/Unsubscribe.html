@@ -1,0 +1,20 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<f:if condition="{notFound}">
+	<div class="error">
+		We're sorry, this address doesn't exists in the newsletter subscribers list. Please contact us.
+	</div>
+</f:if>
+<f:form name="recipient" action="delete" object="{recipient}" method="post">
+	<div class="form-row">
+		<label for="email"><f:translate key="tx_newsletterman_domain_model_recipient.email" /></label>
+		<f:form.textfield property="email" id="email" class="{f:if(condition: '{notFound}', then: 'error')}" />
+	</div>
+	<div class="form-row">
+		<f:form.submit value="unsubscribe" />
+	</div>
+</f:form>
+
+</f:section>

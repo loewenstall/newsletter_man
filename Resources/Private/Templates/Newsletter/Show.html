@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>Show Newsletter</h1>
+
+<f:flashMessages renderMode="div" />
+
+	<f:debug>{newsletter}</f:debug>
+<table  class="tx_newsletterman" >
+	<tr>
+		<th><f:translate key="tx_newsletterman_domain_model_newsletter.send_date" /></th>
+		<th><f:translate key="tx_newsletterman_domain_model_newsletter.page" /></th>
+		<th><f:translate key="tx_newsletterman_domain_model_newsletter.state" /></th>
+		<th> </th>
+	</tr>
+
+		<tr>
+			<td>{newsletter.sendDate -> f:format.date()}</td>
+			<td>{newsletter.page}</td>
+			<td>{newsletter.state}</td>
+			<td><f:link.action action="edit" arguments="{newsletter : newsletter}">Edit</f:link.action></td>
+		</tr>
+</table>
+
+	<div class="send">
+		<f:link.action action="send" arguments="{newsletter: newsletter}">Send Newsletter</f:link.action>
+	</div>
+
+</f:section>

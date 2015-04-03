@@ -1,0 +1,42 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<f:if condition="{exists} == 'active'">
+	<div class="error">
+		<p>
+			We're sorry, this recipient already exists in the newsletter subscribers list.
+		</p>
+	</div>
+</f:if>
+
+<f:if condition="{exists} == 'notConfirmed'">
+	<div class="error">
+		<p>
+			We're sorry, this recipient already waits for activation.<br />
+			<f:link.action action="actmail" arguments="{recipientUid: recipient.uid}">Send confirmation Email again.</f:link.action>
+		</p>
+	</div>
+</f:if>
+
+<f:form name="recipient" action="save" object="{recipient}" method="post">
+	<div class="form-row">
+		<label for="gender"><f:translate key="tx_newsletterman_domain_model_recipient.gender" /></label>
+		<f:form.select property="gender" options="{gender}" id="gender" />
+	</div>
+	<div class="form-row">
+		<label for="firstName"><f:translate key="tx_newsletterman_domain_model_recipient.first_name" /></label>
+		<f:form.textfield property="firstName" id="firstName" />
+	</div>
+	<div class="form-row">
+		<label for="lastName"><f:translate key="tx_newsletterman_domain_model_recipient.last_name" /></label>
+		<f:form.textfield property="lastName" id="lastName" />
+	</div>
+	<div class="form-row">
+		<label for="email"><f:translate key="tx_newsletterman_domain_model_recipient.email" /></label>
+		<f:form.textfield property="email" id="email" class="{f:if(condition: '{exists}', then: 'error')}" />
+	</div>
+	<div class="form-row">
+		<f:form.submit value="subscribe" />
+	</div>
+</f:form>
+</f:section>

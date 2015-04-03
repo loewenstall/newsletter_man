@@ -1,0 +1,16 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<div class="confirm-delete">
+	<f:form name="recipient" action="delete" object="{recipient}" method="post">
+		<p>
+			Are you sure, you want to unsubscribe from the newsletter?
+			<f:form.hidden name="DELETE" value="1" />
+			<f:form.hidden name="recipient[email]" value="{recipientToDelete.email}" />
+			<f:form.submit value="Yes" />
+		</p>
+	</f:form>
+</div>
+
+</f:section>

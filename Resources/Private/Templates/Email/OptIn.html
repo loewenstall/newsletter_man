@@ -1,0 +1,6 @@
+{namespace l=LEO\NewsletterMan\ViewHelpers}
+<l:marker recipient="{recipient}" content="{text}" />
+
+<f:uri.action action="confirm" absolute="true" arguments="{hash: recipient.hash}" />
+
+{footer}

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<Plugin>
+			<ROOT>
+				<type>array</type>
+				<el>
+					<settings.storagePid>
+						<TCEforms>
+							<label>After subscription store recipient in sysfolder</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</settings.storagePid>
+					<settings.redirect>
+						<TCEforms>
+							<label>After subscription redirect to page</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</settings.redirect>
+				</el>
+			</ROOT>
+		</Plugin>
+		<Confirmation_Mail>
+			<ROOT>
+				<type>array</type>
+				<el>
+					<settings.senderEmail>
+						<TCEforms>
+							<label>Confirmation Email sender Email</label>
+							<config>
+								<type>input</type>
+								<default>your.email@your-company.com</default>
+								<cols>30</cols>
+								<rows>15</rows>
+							</config>
+						</TCEforms>
+					</settings.senderEmail>
+					<settings.senderName>
+						<TCEforms>
+							<label>Confirmation Email sender Name</label>
+							<config>
+								<type>input</type>
+								<default>Your Name</default>
+								<cols>30</cols>
+								<rows>15</rows>
+							</config>
+						</TCEforms>
+					</settings.senderName>
+					<settings.subject>
+						<TCEforms>
+							<label>Confirmation Email Subject</label>
+							<config>
+								<type>input</type>
+								<default>Your subscription</default>
+								<cols>30</cols>
+								<rows>15</rows>
+							</config>
+						</TCEforms>
+					</settings.subject>
+					<settings.text>
+						<TCEforms>
+							<label>Confirmation Email Text (plain/text)</label>
+							<config>
+								<type>text</type>
+								<default>Dear User,
+your text...
+
+If in form exist, you can use marker for:
+
+#FIRST_NAME# (the first name)
+#LAST_NAME# (the last name)
+#TITLE# (the title)
+#GENDER# (will be replaced for salutation)</default>
+								<cols>30</cols>
+								<rows>15</rows>
+							</config>
+						</TCEforms>
+					</settings.text>
+					<settings.footer>
+						<TCEforms>
+							<label>Confirmation Email Footer</label>
+							<config>
+								<type>text</type>
+								<default>Your Company, address</default>
+								<cols>30</cols>
+								<rows>6</rows>
+							</config>
+						</TCEforms>
+					</settings.footer>
+				</el>
+			</ROOT>
+		</Confirmation_Mail>
+		<Confirmation_Page>
+			<ROOT>
+				<el>
+					<settings.confirmation.successPageHeadline>
+						<TCEforms>
+							<label>Successful confirmation headline</label>
+							<config>
+								<type>input</type>
+								<cols>30</cols>
+							</config>
+						</TCEforms>
+					</settings.confirmation.successPageHeadline>
+					<settings.confirmation.successPageText>
+						<TCEforms>
+							<label>Successful confirmation Text</label>
+							<config>
+								<type>text</type>
+								<cols>30</cols>
+								<rows>15</rows>
+							</config>
+							<defaultExtras>richtext[*]:rte_transform[flag=rte_enabled|mode=ts_css]</defaultExtras>
+						</TCEforms>
+					</settings.confirmation.successPageText>
+					<settings.confirmation.failedPageHeadline>
+						<TCEforms>
+							<label>Failed confirmation headline</label>
+							<config>
+								<type>input</type>
+								<cols>30</cols>
+							</config>
+						</TCEforms>
+					</settings.confirmation.failedPageHeadline>
+					<settings.confirmation.failedPageText>
+						<TCEforms>
+							<label>Failed confirmation Text</label>
+							<config>
+								<type>text</type>
+								<cols>30</cols>
+								<rows>15</rows>
+							</config>
+							<defaultExtras>richtext[*]:rte_transform[flag=rte_enabled|mode=ts_css]</defaultExtras>
+						</TCEforms>
+					</settings.confirmation.failedPageText>
+				</el>
+			</ROOT>
+		</Confirmation_Page>
+	</sheets>
+</T3DataStructure>

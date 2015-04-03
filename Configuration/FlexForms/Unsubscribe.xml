@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<Plugin>
+			<ROOT>
+				<type>array</type>
+				<el>
+					<settings.redirect>
+						<TCEforms>
+							<label>After unsubscription redirect to page</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<minitems>0</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</settings.redirect>
+				</el>
+			</ROOT>
+		</Plugin>
+	</sheets>
+</T3DataStructure>
