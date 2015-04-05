@@ -30,15 +30,7 @@ namespace LEO\NewsletterMan\Controller;
 /**
  * NewsletterController
  */
-class NewsletterController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
-
-	/**
-	 * newsletterRepository
-	 *
-	 * @var \LEO\NewsletterMan\Domain\Repository\NewsletterRepository
-	 * @inject
-	 */
-	protected $newsletterRepository = NULL;
+class NewsletterController extends NewsletterBaseController {
 
 	/**
 	 * action list
@@ -72,5 +64,8 @@ class NewsletterController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
 	public function sendAction(\LEO\NewsletterMan\Domain\Model\Newsletter $newsletter) {
 		$this->view->assign('newsletter', $newsletter);
+
+		$this->initializeMailer($newsletter);
 	}
+
 }

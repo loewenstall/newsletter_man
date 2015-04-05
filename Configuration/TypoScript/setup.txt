@@ -1,4 +1,3 @@
-
 plugin.tx_newsletterman {
 	view {
 		templateRootPath = {$plugin.tx_newsletterman.view.templateRootPath}
@@ -13,6 +12,16 @@ plugin.tx_newsletterman {
 		# rewrittenPropertyMapper = 1
 	}
 }
+
+module.tx_newsletterman {
+	settings {
+		baseURL < config.baseURL
+	}
+}
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:newsletter_man/Configuration/TypoScript/page.txt">
+
+config.no_cache = 1
 
 config.tx_extbase {
     persistence {

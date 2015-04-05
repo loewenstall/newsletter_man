@@ -56,6 +56,36 @@ if (TYPO3_MODE === 'BE') {
 	);
 }
 
+// add new doktype to the list of page types
+$customPageIcon = 'EXT:' . $_EXTKEY . 'Resources/Public/Images/page_icon.png';
+
+$GLOBALS['PAGES_TYPES'][166] = array(
+	'type' => 'newsletter',
+	'icon' => $customPageIcon,
+	'allowedTables' => '*'
+);
+
+// add the new doktype to the page type selector
+$GLOBALS['TCA']['pages']['columns']['doktype']['config']['items'][] = array(
+	'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_db.xlf:newsletter_page_type',
+	166,
+	$customPageIcon
+);
+
+$GLOBALS['TCA']['pages_language_overlay']['columns']['doktype']['config']['items'][] = array(
+     'LLL:EXT:' . $_EXTKEY . '/Resources/Private/Language/locallang_db.xlf:newsletter_page_type',
+	166,
+	$customPageIcon
+);
+
+// add the icon for the new doktype
+\TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon('newsletter', 166, $customPageIcon);
+
+// add the new doktype to the list of types available from the new page menu at the top of the page tree
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
+        'options.pageTree.doktypesToShowInNewPageDragArea := addToList(' . 166 . ')'
+);
+
 // tca
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_newsletterman_domain_model_newsletter', 'EXT:newsletter_man/Resources/Private/Language/locallang_csh_tx_newsletterman_domain_model_newsletter.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_newsletterman_domain_model_newsletter');

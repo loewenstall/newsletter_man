@@ -93,6 +93,7 @@ class BaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 			}
 		}
 	}
+
 	/**
 	 * @param \LEO\NewsletterMan\Domain\Model\Recipient $recipient
 	 */

@@ -34,6 +34,25 @@ use TYPO3\CMS\Extbase\Persistence\Generic\Query;
 class RecipientRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 
 	/**
+	 * @param integer $pid
+	 * @return \LEO\NewsletterMan\Domain\Model\Recipient
+	 */
+	public function findByPid($pid) {
+		$this->ignoreQuerySettings();
+
+		$query = $this->createQuery();
+		$query->matching(
+			$query->logicalAnd(
+				$query->equals('pid', $pid),
+				$query->equals('hidden', 0),
+				$query->equals('deleted', 0)
+			)
+		);
+
+		return $query->execute()->toArray();
+	}
+
+	/**
 	 * @param string $hash
 	 * @return \LEO\NewsletterMan\Domain\Model\Recipient
 	 */

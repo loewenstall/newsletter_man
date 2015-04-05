@@ -66,6 +66,9 @@
 			<trans-unit id="tx_newsletterman_domain_model_sender.sender_name">
 				<source>Sender Name</source>
 			</trans-unit>
+			<trans-unit id="newsletter_page_type">
+				<source>Newsletter Template</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
