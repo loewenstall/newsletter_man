@@ -6,6 +6,7 @@ CREATE TABLE tx_newsletterman_domain_model_newsletter (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
+	title varchar(255) DEFAULT '' NOT NULL,
 	send_date datetime DEFAULT '0000-00-00 00:00:00',
 	page int(11) DEFAULT '0' NOT NULL,
 	state int(11) DEFAULT '0' NOT NULL,

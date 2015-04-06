@@ -9,7 +9,7 @@ $GLOBALS['TCA']['tx_newsletterman_domain_model_newsletter'] = array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, send_date, page, state, recipients, sender',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, send_date, page, state, recipients, sender'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, send_date, page, state, recipients, sender'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -91,6 +91,15 @@ $GLOBALS['TCA']['tx_newsletterman_domain_model_newsletter'] = array(
 				'range' => array(
 					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
 				),
+			),
+		),
+		'title' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:newsletter_man/Resources/Private/Language/locallang_db.xlf:tx_newsletterman_domain_model_newsletter.title',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'required',
 			),
 		),
 		'send_date' => array(

@@ -6,6 +6,9 @@
 			<trans-unit id="tx_newsletterman_domain_model_newsletter">
 				<source>Newsletter</source>
 			</trans-unit>
+			<trans-unit id="tx_newsletterman_domain_model_newsletter.title">
+				<source>Title</source>
+			</trans-unit>
 			<trans-unit id="tx_newsletterman_domain_model_newsletter.send_date">
 				<source>Send Date</source>
 			</trans-unit>

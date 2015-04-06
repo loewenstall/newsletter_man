@@ -1,0 +1,20 @@
+<f:layout name="Backend" />
+
+<f:section name="main">
+<h1>Recipient Lists</h1>
+
+<f:flashMessages renderMode="div" />
+
+<ul class="be-ist">
+	<f:for each="{recipientList}" as="list">
+		<li>
+			<span class="id">{list.uid}</span>
+			<span class="name">{list.name}</span>
+			<span class="count"><f:count>{list.recipients}</f:count> Sysfolder with recipients</span>
+		</li>
+	</f:for>
+</ul>
+<f:debug>{recipientList}</f:debug>
+
+<f:link.action action="new">New Recipient List</f:link.action>
+</f:section>

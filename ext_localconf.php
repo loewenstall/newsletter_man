@@ -26,3 +26,12 @@ if (!defined('TYPO3_MODE')) {
 		'Recipient' => 'unsubscribe, delete, done',
 	)
 );
+
+// add scheduler task
+if (!defined ('TYPO3_MODE')) die ('Access denied.');
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['scheduler']['tasks']['tx_newsletterman_send'] = array(
+    'extension'        => $_EXTKEY,
+    'title'            => 'Send Newsletter',
+    'description'      => 'All created and unsent items will be send by defined date/time.'
+);

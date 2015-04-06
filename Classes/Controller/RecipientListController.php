@@ -41,20 +41,25 @@ class RecipientListController extends BaseController {
 	protected $recipientListRepository = NULL;
 
 	public function listAction() {
+		$recipientList = $this->recipientListRepository->findAll();
+		$this->view->assign('recipientList', $recipientList);
 	}
 
-	public function showAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientlist) {
+	public function showAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientList) {
+		$this->view->assign('recipientList', $recipientList);
 	}
 
-	public function newAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientlist = null) {
+	public function newAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientList = null) {
+		$this->view->assign('recipientList', $recipientList);
 	}
 
-	public function createAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientlist) {
+	public function createAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientList) {
 	}
 
-	public function editAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientlist) {
+	public function editAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientList) {
+		$this->view->assign('recipientList', $recipientList);
 	}
 
-	public function updateAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientlist) {
+	public function updateAction(\LEO\NewsletterMan\Domain\Model\RecipientList $recipientList) {
 	}
 }

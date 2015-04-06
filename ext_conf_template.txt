@@ -1,0 +1,9 @@
+	# cat=basic; type=int+; label=Messages per cycle : Number of messages to be sent per cycle of the mailer cron task.
+sendPerCycle = 50
+
+	# cat=basic; type=string; label=Administrator Email: Administrator email is used to send email if there's cronjob error.
+adminEmail = admin@website.com
+
+	# cat=basic/enable; type=boolean; label=Send notification email : Send notification to admin mail after each mailing.
+notificationJob = 1
+

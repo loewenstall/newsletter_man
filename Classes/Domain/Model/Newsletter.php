@@ -33,6 +33,13 @@ namespace LEO\NewsletterMan\Domain\Model;
 class Newsletter extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
+	 * title
+	 *
+	 * @var string
+	 */
+	protected $title = '';
+
+	/**
 	 * sendDate
 	 *
 	 * @var \DateTime
@@ -86,6 +93,25 @@ class Newsletter extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected function initStorageObjects() {
 		$this->recipients = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
+
+	/**
+	 * Returns the title
+	 *
+	 * @return string $title
+	 */
+	public function getTitle() {
+		return $this->title;
+	}
+
+	/**
+	 * Sets the title
+	 *
+	 * @param string $title
+	 * @return void
+	 */
+	public function setTitle($title) {
+		$this->title = $title;
 	}
 
 	/**

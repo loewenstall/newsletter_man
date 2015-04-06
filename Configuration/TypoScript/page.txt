@@ -1,0 +1,20 @@
+[globalVar = TSFE:page|doktype = 166]
+page >
+
+newsletter = PAGE
+newsletter {
+    typeNum = 166
+
+	config {
+		absRefPrefix < config.baseURL
+        disableAllHeaderCode = 1
+        xhtml_cleaning = 1
+        admPanel = 0
+        additionalHeaders = Content-type: text/html
+        debug = 0
+        no_cache = 1
+    }
+}
+
+page < newsletter
+[global]
